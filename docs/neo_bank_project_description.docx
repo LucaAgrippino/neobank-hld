@@ -1,0 +1,154 @@
+# The Organization
+
+-   Publicly traded retail bank
+
+-   1 million customers
+
+-   10,000 employees
+
+-   200 branches
+
+-   Founded 1905
+
+# Competitive Landscape
+
+Traditional retail bank landscape -- static for decades. Some top-tier
+banks and some smaller banks.
+
+Significantly challenged by two main drivers:
+
+-   New government regulations:
+
+    -   3 years ago, the regulator forced the banks to sell their credit
+        card companies. Overnight, they became direct competitors.
+
+    -   Open Banking, forced banks to open their customer data to
+        fintech companies for competing services.
+
+-   Advances in technology:
+
+    -   New digital payment services offer complete financial services
+        -- Previously only available by retail banking.
+
+# Business Objectives
+
+-   Offer apps and services that provide remarkable digital experiences
+
+-   Provide any number of users with immediate responses
+
+-   Low Time-to-Market: Introducing new digital channels and services,
+    fast!
+
+# Technical Objectives
+
+-   Scalability -- Support millions of customers
+
+-   Concurrency -- Thousands of concurrent users
+
+-   Latency -- ms-level response time
+
+-   360° unified view of data from a single source
+
+-   Fast dev cycle -- weeks to launch a new application
+
+# Tecnical Challenges
+
+-   Data originates in multiple systems that are challenging to
+    integrate
+
+-   Legacy systems were not designed to support the speed, scale and
+    volumes expected (COBOL,z/OS)
+
+-   Should be segregated from the apps for security and cost
+    considerations
+
+![](media/image1.png){width="6.6930555555555555in"
+height="3.563834208223972in"}
+
+# Project Description
+
+You are an architect responsible to design NeoBank's digital
+Transformation. Current bank infrastructure is a CBS based on COBOL
+code, running on z/OS on IBM iSeries Mainframe.
+
+DB2 serves as a database for all transactions. ADABAS is a database with
+customer information.
+
+Your design adds new on-premises deployment. You need to define the
+hardware and software aspects of it. Additionally, the on-prem design
+syncs to a cloud environment. Both on-premises and cloud environments
+run new digital services (some can legally run only on-prem, others can
+run in the cloud).
+
+The cloud environment features an API GW to serve the bank's new mobile
+app and website.
+
+Your team has one year to launch this MVP.
+
+# High Level Requirements
+
+-   Functional Requirements
+
+    -   The new digital services:
+
+        -   Show account information and balance
+
+        -   Perform bank transfer to another account in the same bank or
+            another bank
+
+            -   Add new Fraud detection engine. There are two modes
+                --real-time for transfer, and an offline which requires
+                more data and processing time
+
+            -   When a fraud is detected, a transaction is cancelled,
+                and the customer is informed in the application
+
+        -   Show monthly income/expenses report
+
+        -   Open Banking API (Over REST)
+
+        -   AI agent which consults financially based on the customer
+            data. E.g. Cutting expenses, making investments, etc. (only
+            this service can run on the cloud and not on-prem)
+
+# Non-Functional Requirements
+
+-   99.999% uptime
+
+-   No Data Loss
+
+-   Account information in the app can be out of date up to 24 hours for
+    incoming transactions from other banks, or payments not done through
+    the app
+
+-   All transactions must be performed using a CBS transaction
+
+-   Support 100K digital users within 1 year
+
+-   1 year for MVP to go live
+
+-   Monitoring metrics for technical and business insights
+
+-   60 experienced developers. Mostly Java and AWS background. 5 COBOL
+    developers.
+
+-   Minimize storage and processing budget (present your calculation of
+    operational costs\*)
+
+-   Secure access, GDPR compliance (regional server, the right to delete
+    all user data)
+
+-   Within 3 years, 1M digital users, all in the same geographic region
+
+# Project Guidelines
+
+You are required to write a full High Level Design document of the
+system, based on the provided template. Formulate assumptions,
+constraints and write requirements.
+
+Design-Identify components and flows (user/data), persistency.
+
+No need to implement anything, only write the design!
+
+No need for deep dive into the different components (can be in the high
+level flow).
