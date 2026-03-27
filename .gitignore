@@ -1,0 +1,32 @@
+# ─── Operating System ────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ─── Visual Paradigm ─────────────────────────────────────────────────────────
+# Keep .vpp project files but ignore auto-generated temp folders
+*.vpp.bak*
+*.vpp.lck
+.vptmp/
+vp-workspace/
+
+# ─── Microsoft Word ──────────────────────────────────────────────────────────
+# Keep .docx but ignore Word temp/lock files
+~$*.docx
+~$*.doc
+*.tmp
+
+# ─── IDE and Editors ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+logs/
