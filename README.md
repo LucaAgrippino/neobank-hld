@@ -76,7 +76,7 @@ neobank-hld/
 ├── design/
 │   └── neobank_design.vpp                 # Visual Paradigm source project
 └── presentation/
-    └── NeoBank_Presentation_v2_5.pptx     # Architecture presentation
+    └── NeoBank_Presentation.pptx     # Architecture presentation
 ```
 
 ## Non-Functional Requirements
